@@ -28,3 +28,33 @@ console.log(typeof OutsideTemp)
 console.log(typeof myFunction) //Actually it is object function
 console.log(typeof id)
 console.log(typeof myObj)
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//There are two types of memories-Stack(Primitive Type) and Heap(Non Primitive)
+let myYoutubename="sofsaofsff.com"
+let anothername=myYoutubename //another name gets the copy of value ,not the exact value
+console.log( anothername)
+anothername="chaiorcode"
+console.log(anothername)
+console.log(myYoutubename)
+let userOne={
+    email:"sfasfas",
+    upi:"sfadfa"
+}
+let userTwo=userOne
+userTwo.email="hitesh.googl.com"
+console.log(userOne.email)
+console.log(userTwo.email)
+/*The variable stores only a reference (address) to that object in the heap.
+
+When assigning a non-primitive to another variable, JavaScript copies the reference, so both variables point to the same object.
+No matter what the variables are always stored in stack memory.But the non-primitive variable in the stack only stores a reference (address) to the object in the heap.
+For the diagram please refer to notes of Day-04
+*/
+
+//++++++++++++++++++++++++++++++++++++++++++//
+/*In JavaScript, typeof is an operator, not a function.
+It doesn’t need parentheses (though you can use them for clarity).
+
+It works directly on its operand, like + or !.
+It’s a unary operator (takes only one operand) and returns a string describing the type.*/
+
