@@ -1,7 +1,8 @@
-const score = 400
+const score = 400 //Primitive type Number
 console.log(score) //400
 //It is by default number.But we explicitly define its type
-const balance=new Number(100)
+const balance=new Number(100) //Number object (a wrapper around a numeric value).
+//This Number object has extra methods and properties available from Number.prototype
 console.log(balance) //[Number:100]
 console.log(balance.toString())
 console.log(typeof balance)
