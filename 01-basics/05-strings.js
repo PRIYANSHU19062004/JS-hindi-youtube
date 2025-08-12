@@ -1,6 +1,7 @@
 const name="hitesh-hc" 
+let repoCount=32
 //console.log(name+repoCount+"Value")
-console.log(`Hello my name is ${name}and my rep count is ${repoCount}`) //String interpolation
+console.log(`Hello my name is ${name} and my rep count is ${repoCount}`) //String interpolation
 const gameName=new String('hitesh-hc-com') //we are not creating a primitive string, we are creating a String object using the String constructor.
 /*"hitesh-hc-com" (with quotes) → primitive string
 new String("...") → String object (wrapper around the primitive)
@@ -30,3 +31,25 @@ const url="https://hitesh.com/hitesh%20choudhary"
 console.log(url.replace('%20','-'))
 console.log(url.includes('hitesh')) //will return true if url contains hitesh else false
 console.log(gameName.split('-'))//will array split on basis of '-'
+
+//++++++++++++++++++++++++++++++++++++++++++++Difference between substring and slicing of Strings in Javascript++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+/*Both .substring() and .slice() are JavaScript string methods for extracting a portion of a string, but they have subtle differences in how they handle parameters and negative values.
+string.substring(startIndex, endIndex)
+string.slice(startIndex, endIndex)
+
+startIndex → where extraction begins (inclusive)
+endIndex → where extraction stops (exclusive)
+Feature	                                               .substring()	                                                                   .slice()
+Negative indexes	                                Treats negative values as 0	                                                       Counts from the end of the string
+
+Order of parameters                              	If startIndex > endIndex, swaps them automatically	                      Keeps the order — returns "" if start > end
+
+
+let str = "JavaScript";
+console.log(str.substring(4, -2)); // "Java"  (-2 becomes 0)
+console.log(str.slice(4, -2));     // "Scri"  (-2 means 2 chars from end)
+let str = "JavaScript";
+const str= `JavaScript`
+console.log(str.substring(8, 4)); // "Scri"  (swapped to substring(4,8))
+console.log(str.slice(8, 4));     // ""      (no swap, returns empty string)
+*/

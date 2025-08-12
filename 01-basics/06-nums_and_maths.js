@@ -10,13 +10,13 @@ console.log(balance.length)
 console.log(balance.toFixed(2)) //will give the output 100.00
 //Used specially when making an Ecommerce application
 console.log(balance.toFixed(1))//will give the output 100.0
-const otherNumber1=23.9966 //24.0
-const otherNumber2=123.9966 //124
-const otherNumber3=1223.9966 //1.22e+3
+const otherNumber1=23.9966 
+const otherNumber2=123.9966 
+const otherNumber3=1223.9966 
 //In toPrecision() Number of significant digits. Must be in the range 1 - 21, inclusive.
-console.log(otherNumber1.toPrecision(3))  //
-console.log(otherNumber2.toPrecision(3))  //
-console.log(otherNumber3.toPrecision(3))  //
+console.log(otherNumber1.toPrecision(3))  //24.0
+console.log(otherNumber2.toPrecision(3))  //124
+console.log(otherNumber3.toPrecision(3))  //1.22e+3
 const hundreds=1000000
 console.log(hundreds.toLocaleString())//1,000,000 .The commas are usually by default of US standards
 // Write just Number and enter in console.We will see many properties attached with number
