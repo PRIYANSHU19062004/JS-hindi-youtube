@@ -42,3 +42,4 @@ JsUser.greetingTwo=function(){
 console.log(JsUser.greetingTwo())
 Object.freeze(JsUser)
 JsUser.email="Prince@microsoft.com"
+console.log(JsUser)
