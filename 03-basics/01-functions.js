@@ -48,7 +48,7 @@ console.log(calculateCartPrice1(200,400,500)) //[ 200, 400, 500 ]
 function calculateCartPrice2(val1,val2,...num1){ 
     return num1
 }
-console.log(calculateCartPrice1(200,400,500,2000)) //[ 200, 400, 500 ]
+console.log(calculateCartPrice1(200,400,500,2000)) //[ 200, 400, 500,2000]
 console.log(calculateCartPrice2(200,400,500,2000)) //[ 500, 2000 ].val1=200,val2=400.
 
 

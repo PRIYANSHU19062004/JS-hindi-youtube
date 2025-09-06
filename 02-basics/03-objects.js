@@ -25,7 +25,7 @@ console.log(JsUser["email"])//more better way to access an object
 console.log(JsUser["fullName"]) //only way to access fullName in the object
 console.log(JsUser.mySym)//will return correct key1 which is correct but still datatype of mySym will be string.It is not symbol.
 console.log(typeof JsUser.mySym) //will give string datatype which is wrong
-console.log(JsUser[mySym1])//wll give output mykey1
+console.log(JsUser[mySym1])//wll give output mykey2
 console.log(typeof JsUser[mySym1])
 
 //Changing values of an object
@@ -41,5 +41,5 @@ JsUser.greetingTwo=function(){
 }
 console.log(JsUser.greetingTwo())
 Object.freeze(JsUser)
-JsUser.email="Prince@microsoft.com"
+JsUser.email="Prince@microsoft.com"//As object is already freezed,so now it will not modify.
 console.log(JsUser)

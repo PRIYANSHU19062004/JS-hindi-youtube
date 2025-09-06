@@ -22,6 +22,10 @@ console.log(myArr)
 console.log(myArr.indexOf(9))//will return -1 as 9 dont exist in the array right now.
 ///////////////////////JOIN////////////////////
 //binding array
+// join() is an Array method in JavaScript.
+// It joins all elements of an array into a single string.
+// By default, it uses a comma (,) as a separator.
+// You can pass a custom separator like join("-").
 const newArr=myArr.join()
 console.log(myArr)
 console.log(newArr)
@@ -32,7 +36,7 @@ console.log("A",myArr)
 const myn1=myArr.slice(1,3) //include 1 and 2
 console.log(myn1)
 console.log("B",myArr)
-const myn2=myArr.splice(1,3)
+const myn2=myArr.splice(1,3)//myn2 includes elements from index 1 to 3 and now myArr contains the rest of the elements.
 console.log(myn2)
 console.log("C",myArr)
 

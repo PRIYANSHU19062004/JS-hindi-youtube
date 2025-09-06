@@ -6,7 +6,7 @@ const gameName=new String('hitesh-hc-com') //we are not creating a primitive str
 /*"hitesh-hc-com" (with quotes) → primitive string
 new String("...") → String object (wrapper around the primitive)
 The object property has extra properties and methods.Here string is an object .Index is a key and char is a value.
-JS automatically wraps primitive strings in a temperory String object when we call metods.
+JS automatically wraps primitive strings in a temperory String object when we call methods.
 */
 let srere='hdsifssf' 
 console.log(typeof(gameName)) //object type
@@ -14,7 +14,7 @@ console.log(typeof srere) //string type
 console.log()
 console.log(gameName[0]);
 console.log(gameName.__proto__);
-console.log(gameName.length); //8
+console.log(gameName.length); //13
 console.log(gameName.toUpperCase()); 
 console.log(gameName.charAt(3)); 
 console.log(gameName.indexOf('t')) //go through all methods of Strings for the intereview
@@ -22,7 +22,8 @@ const newString=gameName.substring(0,4) //will not include the value at 4th inde
 //We can't give -ve value to substring().It will not obey it
 console.log(newString)
 const anString=gameName.slice(0,4)
-const anotherString=gameName.slice(-8,4)//If we give -ve value,It will start from reverse
+const anotherString=gameName.slice(-8,4)//If we give -ve value,It will start from reverse so start from gameName.length+(-8)index which is 13-8=5th index and will end at 4th index but will not include element aat 4th index.
+//As(5>4)or(starting index>ending index) so it will give and empty string as the result.
 console.log(anString)
 console.log(anotherString)
 const newStringOne= " hitesh "

@@ -69,6 +69,10 @@ const course={
 // console.log(courseInstructor); //will print Hitesh
 const {courseInstructor:instructor}=course
 console.log(instructor); //will print Hitesh
+/* JSON stands for JavaScript Object Notation.
+ It is a text-based format used to store and exchange data between computers, servers, and applications.
+ You can think of JSON as a way to send information in a structured and readable format.
+*/
 //Below is the format of a JSON.
 //API is in object format.
 /*{
