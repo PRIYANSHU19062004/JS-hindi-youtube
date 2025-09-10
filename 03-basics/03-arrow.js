@@ -43,4 +43,6 @@ console.log(addTwo(3,4)) //7
 //Can also be written as
 //const addTwo=(num1,num2)=>(num1+num2)
 const addObject=(num1,num2)=>({username:"hitesh"}) //return object.To return object it should be wrapped in a paranthesis.
-console.log(addObject)
+console.log(addObject())
+
+const myArray=[2,5,4,7,8]
