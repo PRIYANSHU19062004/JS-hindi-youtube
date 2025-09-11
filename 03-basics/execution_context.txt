@@ -1,0 +1,193 @@
+🔹 What is Execution Context in JavaScript?
+
+Execution context = environment where JavaScript code is executed.
+It decides:
+
+Which variables and functions can be accessed.
+
+How the value of this is determined.
+
+How code is executed step by step.
+
+🔹 Types of Execution Context
+
+Global Execution Context (GEC)
+
+Function Execution Context (FEC)
+
+Eval Execution Context (rarely used)
+
+🔹 Global Execution Context (GEC)
+
+This is the default execution context.
+
+It is created when the JavaScript program starts running.
+
+All code that is not inside a function runs in the GEC.
+
+🔹 Key Features of GEC
+
+Global Object is created
+
+In browsers → window object
+
+In Node.js → global object
+
+this keyword points to the global object
+
+In browsers → this === window
+
+Memory allocation happens for variables and functions declared in the global scope.
+
+var → becomes a property of the global object
+
+let and const → stored in a separate "Script scope" (not attached to global object)
+
+Only one Global Execution Context exists per program.
+
+🔹 Example
+var x = 10;
+let y = 20;
+
+function greet() {
+  console.log("Hello!");
+}
+
+console.log(this);      // window (in browsers)
+console.log(window.x);  // 10 (because var attaches to global object)
+console.log(window.y);  // undefined (because let doesn’t attach)
+
+
+Here, x, y, and greet are in the Global Execution Context.
+
+this inside GEC refers to the window object in browsers.
+
+Who runs the code inside a function?
+
+👉 When a function is called, JavaScript creates a new Execution Context for that function.
+This is called a Function Execution Context (FEC).
+
+The Global Execution Context (GEC) runs first (when your program starts).
+
+Every time you call a function → a new FEC is created.
+
+That FEC is pushed onto the Call Stack and executes the function code.
+
+🔹 Steps when a function runs
+
+Function is invoked
+
+Example: greet();
+
+New Function Execution Context (FEC) is created
+
+It has:
+
+Its own Variable Environment (local variables, function args).
+
+Scope chain (access to outer scopes).
+
+this value (depends on how the function is called).
+
+FEC runs the function’s code
+
+When the function finishes, the FEC is popped off the Call Stack.
+
+🔹 Example
+function greet(name) {
+  let message = "Hello " + name;
+  console.log(message);
+}
+
+greet("Priyanshu");
+
+
+How it runs:
+
+Program starts → GEC is created.
+
+greet("Priyanshu") is called.
+
+New FEC is created:
+
+Argument: name = "Priyanshu"
+
+Local variable: message = "Hello Priyanshu"
+
+this (depends on how function is called, but usually window in non-strict mode).
+
+FEC executes → prints "Hello Priyanshu".
+
+FEC is removed after function finishes.
+
+
+Eval Execution Context in JavaScript
+
+Created when JavaScript code runs inside the eval() function.
+
+Example:
+
+eval("var a = 10; console.log(a);"); // prints 10
+
+
+eval() executes the string as code in the current scope.
+
+🔹 Key Points
+
+Temporary execution context is created when eval() runs.
+
+Code inside eval() has access to local scope + global scope.
+
+Variables declared inside eval() can leak into the current scope (in non-strict mode).
+
+function test() {
+  eval("var x = 100;");
+  console.log(x); // 100
+}
+test();
+
+
+In strict mode, variables declared inside eval() stay local to eval only.
+
+'use strict';
+eval("var x = 200;");
+console.log(typeof x); // "undefined"
+
+
+Eval Execution Context is rarely used → it is slow and unsafe (security risks).
+
+✅ Interview line:
+“Eval Execution Context is created when eval() runs. It executes code from a string in the current scope, but it’s discouraged in practice because it’s slow and insecure.
+Why eval() is slow
+
+Code parsing again
+
+Normally, JavaScript is parsed once before execution.
+
+But with eval("some code"), the string has to be parsed and compiled again at runtime → adds overhead.
+
+Prevents optimizations
+
+Modern JS engines (like V8 in Chrome) optimize code for speed.
+
+If eval() is used, the engine can’t predict what code might appear at runtime → turns off many optimizations.
+
+🔹 Why eval() is unsafe
+
+Code injection attacks
+
+If user input is passed to eval(), an attacker can run malicious code.
+
+Example:
+
+let userInput = "alert('Hacked!')";
+eval(userInput); // runs attacker’s code
+
+
+Access to local scope
+
+eval() can access and modify variables in the current scope → can lead to unexpected bugs.
+
+Hard to debug and maintain
+
+Since code is inside a string, errors are harder to trace.
