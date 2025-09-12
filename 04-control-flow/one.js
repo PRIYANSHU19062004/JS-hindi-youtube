@@ -24,3 +24,27 @@ if(2==="2"){ //Strict checking
 const balance=1000
 if(balance>500)console.log("test") //Implicit scope
 if(balance>500)console.log("test"),console.log("test2") //Not recommended at all
+//+++++++++++++++++++
+// if(balance<500){
+//     console.log("less than");
+// }else if(balance<750){
+//     console.log("less than 750");
+// }
+// else if(balance<900){
+//     console.log("less than 900")
+// }
+// else{
+//     console.log("less than 1200");
+// }
+//+++++++++++++++++++++++++++++++++++++
+const userLoggedIn=true
+const debitCard=true
+const loggedInFromGoogle=false
+const loggedInFromEmail=true
+if(userLoggedIn && debitCard && 2==2 ){
+    console.log("Allow to buy course")
+}
+if(loggedInFromGoogle || loggedInFromEmail
+){
+    console.log("User logged in")
+}
