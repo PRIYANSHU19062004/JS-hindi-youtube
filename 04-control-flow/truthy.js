@@ -27,10 +27,11 @@ if(Object.keys(emptyObj).length===0){
 
 //++++++++++++++++++++++++++++++//
 //Nullish Coalescing Operator(??):null undefined
+//The nullish coalescing operator (??) is a logical operator in JavaScript that provides a default value only if the left-hand side is null or undefined.
 let val1;
 //val1=5??10 //5
 //val1=null??10 //10
-//val1=undefined??//15
+//val1=undefined??15//15
 val1=null??10??20 //first value 10 will be assigned.
 
 console.log(val1);
