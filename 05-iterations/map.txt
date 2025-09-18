@@ -1,0 +1,19 @@
+A Map is a special object in JavaScript that stores key-value pairs.
+It is similar to an object, but with some important differences.
+
+✅ Key Features of Map
+
+1. Any type can be a key
+In objects, keys are always strings (or symbols).
+In Map, keys can be anything: string, number, boolean, object, function, etc.
+
+2.Keeps insertion order
+A Map remembers the order in which keys were inserted.
+
+3.Built-in methods
+set(key, value) → add/update a key-value pair
+get(key) → get value by key
+has(key) → check if key exists
+delete(key) → remove a key
+clear() → remove everything
+size → number of entries

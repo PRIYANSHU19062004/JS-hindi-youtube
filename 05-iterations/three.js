@@ -1,7 +1,7 @@
 //for of loop
 //We also put objects inside array and at each interation we derive some values from those objects.
 // [{},{},{}]
-const arr=[1,2,3,4,5]
+const arr=[1,2,3,4,5]           //for arrays both for of and for in are used to iterate it.
 for (const num of arr) {
     console.log(num);
     
@@ -21,15 +21,15 @@ map.set('IN', "India")
 // console.log(map);
 
 for (const [key, value] of map) {
-    // console.log(key, ':-', value);
+     console.log(key, ':-', value);
 }
 
 const myObject = {
-    game1: 'NFS',
+    game1: 'NFS',                 //  Object can't be iterated by for of loop
     game2: 'Spiderman'
 }
 
-// for (const [key, value] of myObject) {
-//     console.log(key, ':-', value);
+for (const [key, value] of myObject) {
+     console.log(key, ':-', value);
     
-// }
+ }
