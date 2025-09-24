@@ -31,7 +31,7 @@ console.log(newStringOne.trim()) //Will delete leading and trailing space.It wor
 const url="https://hitesh.com/hitesh%20choudhary"
 console.log(url.replace('%20','-'))
 console.log(url.includes('hitesh')) //will return true if url contains hitesh else false
-console.log(gameName.split('-'))//will array split on basis of '-'
+console.log(gameName.split('-'))//array will split on basis of '-'
 
 //++++++++++++++++++++++++++++++++++++++++++++Difference between substring and slicing of Strings in Javascript++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /*Both .substring() and .slice() are JavaScript string methods for extracting a portion of a string, but they have subtle differences in how they handle parameters and negative values.
