@@ -1,4 +1,4 @@
- const marvel_heros=["thor","Ironman","spiderman"]
+const marvel_heros=["thor","Ironman","spiderman"]
 const dc_heros=["superman","flash","batman"]
 // marver_heros.push(dc_heros)
 // console.log(marver_heros) //[ 'thor', 'Ironman', 'spiderman', [ 'superman', 'flash', 'batman' ] ]

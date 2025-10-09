@@ -54,19 +54,19 @@ const users=[
 
 
 ]
-users[1].email
+console.log(users[1].email)
 console.log(tinderUser);
 console.log(Object.keys(tinderUser)) //[ 'id', 'name', 'isLoggedIn' ]
 console.log(Object.values(tinderUser))
 console.log(Object.entries(tinderUser)) //[ [ 'id', '123abc' ], [ 'name', 'Sammy' ], [ 'isLoggedIn', false ] ].Key value pair is converted into an array.
-console.log(tinderUser.hasOwnProperty('isLoggedIn'))//will return true if property isLoggedIn is present insider the object tinderUser
+console.log(tinderUser.hasOwnProperty('isLoggedIn'))//will return true if property isLoggedIn is present inside the object tinderUser
 const course={
     coursename:"js in hindi",
     price:"999",
     courseInstructor:"hitesh"
 }
-// const {courseInstructor}=course
-// console.log(courseInstructor); //will print Hitesh
+const {courseInstructor}=course
+console.log(courseInstructor); //will print Hitesh
 const {courseInstructor:instructor}=course
 console.log(instructor); //will print Hitesh
 /* JSON stands for JavaScript Object Notation.

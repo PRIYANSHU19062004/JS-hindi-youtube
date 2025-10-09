@@ -33,7 +33,7 @@ console.log(typeof(newArr))
 
 //slice,splice
 console.log("A",myArr)
-const myn1=myArr.slice(1,3) //include 1 and 2
+const myn1=myArr.slice(1,3) //includes element at index  1 and 2
 console.log(myn1)
 console.log("B",myArr)
 const myn2=myArr.splice(1,3)//myn2 includes elements from index 1 to 3 and now myArr contains the rest of the elements.

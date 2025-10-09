@@ -31,7 +31,7 @@ console.log(typeof myObj)
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //There are two types of memories-Stack(Primitive Type) and Heap(Non Primitive)
 let myYoutubename="sofsaofsff.com"
-let anothername=myYoutubename //another name gets the copy of value ,not the exact value
+let anothername=myYoutubename //anothername gets the copy of value ,not the exact value
 console.log( anothername)
 anothername="chaiorcode"
 console.log(anothername)

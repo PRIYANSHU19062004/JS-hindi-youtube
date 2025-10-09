@@ -23,7 +23,7 @@ const JsUser={
 console.log(JsUser.email)
 console.log(JsUser["email"])//more better way to access an object
 console.log(JsUser["fullName"]) //only way to access fullName in the object
-console.log(JsUser.mySym)//will return correct key1 which is correct but still datatype of mySym will be string.It is not symbol.
+console.log(JsUser.mySym)//will return  mykey1 which is correct but still datatype of mySym will be string.It is not symbol.
 console.log(typeof JsUser.mySym) //will give string datatype which is wrong
 console.log(JsUser[mySym1])//wll give output mykey2
 console.log(typeof JsUser[mySym1])
