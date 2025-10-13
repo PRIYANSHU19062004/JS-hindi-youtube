@@ -1,7 +1,7 @@
 const coding = ["js", "ruby", "java", "python", "cpp"]
 
 coding.forEach( function (val){ //We don't need to write the name of the callback function.
-    //console.log(val);
+    console.log(val);
 } )
 //Arrow function as a call back function.
 coding.forEach( (item) => {

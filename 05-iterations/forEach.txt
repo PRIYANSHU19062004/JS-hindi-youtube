@@ -1,0 +1,82 @@
+What is forEach()?
+forEach() is a loop method in JavaScript used to iterate over the elements of an array.
+It runs a function once for each element in the array.
+Objects can't be directly iterated by for each loop.
+It does not return anything — it’s mainly for side effects (like printing or performing actions).
+You cannot use break or continue inside forEach().
+If you need to stop looping early, use a normal for or for...of loop instead.
+*****************************//**************************************************
+Simple Array
+const fruits = ["apple", "banana", "mango"];
+fruits.forEach(function(item) {
+  console.log(item);
+});
+
+Output:
+
+apple
+banana
+mango
+
+Here, forEach() runs once for each item in the fruits array.
+********************************************//******************************************
+Using array functions also we can iterate an array.
+const numbers = [10, 20, 30, 40];
+
+numbers.forEach((num, index) => {
+  console.log("Index:", index, "Value:", num);
+});
+Output:
+
+diff
+Copy code
+Index: 0 Value: 10
+Index: 1 Value: 20
+Index: 2 Value: 30
+Index: 3 Value: 40
+
+***************************************************//*******************************************************
+You can use Object.keys() or Object.entries() with forEach() to loop through an object 👇
+
+const student = {
+  name: "Priyanshu",
+  age: 21,
+  course: "B.Tech"
+};
+
+Object.entries(student).forEach(([key, value]) => {
+  console.log(key + ":", value);
+});
+
+
+Output:
+
+name: Priyanshu
+age: 21
+course: B.Tech
+*************************************************//******************************
+Object.entries() is a built-in JavaScript method that returns an array of key–value pairs from an object.
+In simple words:
+It converts an object into an array — where each element is itself a [key, value] pair.
+🧩 Example 1 — Basic Example
+const student = {
+  name: "Priyanshu",
+  age: 21,
+  course: "B.Tech"
+};
+console.log(Object.entries(student));
+
+
+Output:
+[
+  ["name", "Priyanshu"],
+  ["age", 21],
+  ["course", "B.Tech"]
+]
+🟢 Each inner array represents one property of the object:
+
+["name", "Priyanshu"]
+
+["age", 21]
+
+["course", "B.Tech"]

@@ -17,3 +17,28 @@ has(key) → check if key exists
 delete(key) → remove a key
 clear() → remove everything
 size → number of entries
+When to Use What
+
+✅ Use Map when:
+
+You need key-value pairs with keys of any type.
+
+You often add/remove entries.
+
+You care about insertion order or iteration performance.
+
+✅ Use Object when:
+
+You need a simple structure for static key-value data.
+
+You plan to use it for JSON data exchange or plain data models.
+
+
+const obj = { name: 'Priyanshu', age: 21 };
+console.log(obj['name']); // Priyanshu
+
+// Using Map
+const map = new Map();
+map.set('name', 'Priyanshu');
+map.set('age', 21);
+console.log(map.get('name')); // Priyanshu

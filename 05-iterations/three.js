@@ -11,8 +11,8 @@ for(const greet of greetings){
     console.log(`Each char is ${greet}`)
 }
 //Maps
-const map=new Map()      // Map is an object in itself
-map.set('IN', "India")
+const map=new Map()      // Map is an object in itself 
+map.set('IN', "India")   //Map is iteratable by for-of loop.
 map.set('USA', "United States of America")
 map.set('Fr', "France")
 map.set('IN', "India")
@@ -26,7 +26,7 @@ for (const [key, value] of map) {
 
 const myObject = {
     game1: 'NFS',                 //  Object can't be iterated by for of loop
-    game2: 'Spiderman'
+    game2: 'Spiderman'            //Objects can be iterated by for-in loop and Object.keys()
 }
 
 for (const [key, value] of myObject) {

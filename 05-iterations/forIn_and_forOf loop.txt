@@ -1,0 +1,97 @@
+⚖️ Difference Between for...of and for...in
+Feature	                              for...of	                         for...in
+Works on	               Iterables (Array, String, Map, Set)	         Objects
+Iterates over	                       Values	                       Keys / Property names
+Use case	                  Arrays, Strings, Maps	                         Objects
+Can use with object?	     ❌ No (without Object.entries)	                 ✅ Yes
+Example	                         for (let value of arr)	                for (let key in obj)
+***********************************************//***************************************************************
+1. for...of Loop
+📘 Purpose:
+Used to iterate over values of an iterable object (like an array, string, Map, Set, etc.)
+🧠 Syntax:
+for (let value of iterable) {
+  // code using value
+}
+🧩 Example 1 — Array
+const fruits = ["apple", "banana", "mango"];
+
+for (let fruit of fruits) {
+  console.log(fruit);
+}
+Output:
+
+apple
+banana
+mango
+🟢 It gives the values directly.
+
+🧩 Example 2 — String
+for (let char of "Priyanshu") {
+  console.log(char);
+}
+Output:
+
+P
+r
+i
+y
+a
+n
+s
+h
+u
+
+🧩 Example 3 — Map
+const student = new Map([
+  ["name", "Priyanshu"],
+  ["age", 21],
+  ["course", "B.Tech"]
+]);
+
+for (let [key, value] of student) {
+  console.log(key + ":", value);
+}
+
+Output:
+name: Priyanshu
+age: 21
+course: B.Tech
+*********************************************//*******************************************************
+2. for...in Loop
+📘 Purpose:
+Used to iterate over keys (property names) of an object.
+🧠 Syntax:
+for (let key in object) {
+  // code using key
+}
+🧩 Example 1 — Object
+const student = {
+  name: "Priyanshu",
+  age: 21,
+  course: "B.Tech"
+};
+for (let key in student) {
+  console.log(key, ":", student[key]);
+}
+
+Output:
+name : Priyanshu
+age : 21
+course : B.Tech
+
+🟢 It gives the keys (property names).
+🧩 Example 2 — Array
+You can technically use it on arrays too (but not recommended):
+const fruits = ["apple", "banana", "mango"];
+for (let index in fruits) {
+  console.log(index, ":", fruits[index]);
+}
+
+Output:
+
+0 : apple
+1 : banana
+2 : mango
+
+⚠️ for...in gives indexes (keys), not values.
