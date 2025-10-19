@@ -4,8 +4,11 @@
 //  return item
  
 //})
-//console.log(values); //will give undefined as for each will not return anything.
+//console.log(values);                         //For each will always return undefined .
 
+//**************************************************************** *//
+//As for-each can return only undefined .So we are using filter now as it can return values.
+//Callback must return true or false
 const myNums=[1,2,3,4,5,6,7,8,9,10]
 const newNums =myNums.filter((num)=>{
      return num>4}) //filter returns values.we have to give a call back fxn to filter which will access each value.

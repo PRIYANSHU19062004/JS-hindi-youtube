@@ -23,7 +23,7 @@ Here, forEach() runs once for each item in the fruits array.
 Using array functions also we can iterate an array.
 const numbers = [10, 20, 30, 40];
 
-numbers.forEach((num, index) => {
+numbers.forEach((num,index) => {
   console.log("Index:", index, "Value:", num);
 });
 Output:
@@ -33,7 +33,7 @@ Copy code
 Index: 0 Value: 10
 Index: 1 Value: 20
 Index: 2 Value: 30
-Index: 3 Value: 40
+Index: 3 Value: 40                                          
 
 ***************************************************//*******************************************************
 You can use Object.keys() or Object.entries() with forEach() to loop through an object 👇
