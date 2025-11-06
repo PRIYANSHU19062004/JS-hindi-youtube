@@ -27,3 +27,18 @@
   document.body.appendChild(div)
 </script> 
 </html>
+
+<!--
+
+What's the difference between div.id=" " and div.setAttribute("id"," ")??
+
+both div.id = "something" and div.setAttribute("id", "something") set the id of an element, but they do it slightly differently in how and when they work.
+
+Key Differences Summary
+Feature                                	div.id = "myId"	                                     div.setAttribute("id", "myId")
+Type 	                                Property assignment	                                              Method call
+Affects	                      DOM property (and also syncs HTML attribute)	       HTML attribute (and also syncs DOM property)
+Use case	                When setting common properties like id, className, etc.	    When setting any attribute, especially non-standard or custom ones
+Performance	                             Slightly faster	                                             Slightly slower
+Example of flexible use	       ❌ Can't set data attributes like data-info	               ✅ Can set data-info or any custom attribute
+-->
