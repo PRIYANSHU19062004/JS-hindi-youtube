@@ -1,0 +1,29 @@
+<!--How we create Node list programmatically?-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai or Code</title>
+</head>
+<body style="background-color: black;color:white;">
+    
+</body>
+<script>
+  const div=  document.createElement('div')
+  console.log(div); //will print <div></div>
+  //We want to add properties to this div element like classname,id ,etc.
+  //Every element is a node list in itself as it has all values but they are not set .
+  div.className="main"
+  div.id=Math.round(Math.random()*10+1) //Will set some random big number as the id of the div.
+  div.setAttribute("title","generated title") //setAttribute has to be given a key-value pair.Here title attribute is give the value "generated title".
+  div.style.backgroundColor="green"
+  div.style.padding="12px"
+  //Now the div we have created is in the memory.It is still not in the page.We have to attach it to the document.
+  //div.innerText="Chai or code"
+  const addText=document.createTextNode("Chai aur code") //Now the TextNode created will be added to the div. 
+  div.appendChild(addText)
+  //Now finally attach div to the document
+  document.body.appendChild(div)
+</script> 
+</html>
