@@ -16,7 +16,7 @@
 <script>
     const parent=document.querySelector('.parent')
     console.log(parent);
-    console.log(parent.children); //We will get an HTML Collection.It is almost like arrayparent
+    console.log(parent.children); //We will get an HTML Collection.It is almost like array
     console.log(parent.children[1].innerHTML); //Tuesday
     //For loop will work anywhere
     for(let i=0;i<parent.children.length;i++){
@@ -29,7 +29,7 @@
     //We can also move from child to parent.
     const dayOne=document.querySelector('.day')
     console.log(dayOne) //HTML query of Monday
-    //Query selector is a expensive  as we are traversing a tree(DOM).
+    //Query selector is an expensive operation  as we are traversing a tree(DOM).
     console.log(dayOne.parentElement);//Will print the parent element.
     console.log(dayOne.nextElementSibling);//will print Tuesday.
     console.log("NODES: ",parent.childNodes);//Now will print the NodeList having size 9 .Child nodes are a complex tree sturcture.In the node list space,enter are also node text.Thats why we want more optimized javascript but web can never that much optimized.Enter will be counted as text Element.In HTML only one line break is counted.Comment will be also couted in the node list. 

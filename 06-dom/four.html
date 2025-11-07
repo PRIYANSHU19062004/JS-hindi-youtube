@@ -13,5 +13,33 @@
 </body>
 <script>
     //Now we to add an extra List item.We will design  a function for adding the list items.
+     function addLanguage(langname){
+       const li= document.createElement('li') 
+       li.innerHTML=`${langName}`
+       document.querySelector('.language').appendChild(li) //Here the tree is traversed everytime the method is called.So it is done in an optimized manner.
+     }
+     addLanguage("python")
+     addLanguage("typescript")
+     function addOptiLanguage(langName){  //This is an optimized approach as we don't have to traverse the tree.
+        const li =document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+
+     }
+     addOptiLanguage('golang')
+
+     //Edit1 the value 
+     const secondLang=document.querySelector("li:nth-child(2)")
+     console.log(secondLang);
+     //secondLang.innerHTML="Mojo" //Instead of this lets create a new element and replace it.
+     const newli=document.createElement('li')
+     newli.textContent="Mojo"
+     secondLang.replaceWith(newli)
+     //Edit2 //Replace first li 'javascript' by 'typescript'
+      const firstLang=document.querySelector("li:first-child")
+      firstLang.outerHTML='<li>Typescript</li>' //Here we changed the outer HTML.
+     //remove
+     const lastLang=document.querySelector('li:last-child')
+     lastLang.remove()
 </script>
 </html>
