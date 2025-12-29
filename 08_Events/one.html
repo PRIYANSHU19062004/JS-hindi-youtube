@@ -19,13 +19,43 @@
    </div>
 </body>
 <script>
-//    document.getElementById('owl').onclick=function(){
-//     alert("owl clicked")   //There might be some problem in this so we use event listerners which also gives us ability of propogation. 
-//    }
-document.getElementById('owl').addEventListener('click',function(){
-    alert("owl clicked again")
-},false) //false by default       //can listen to various events
-//attachEvent() was used earlier
-//jQuery framework-onEventListener
+// //    document.getElementById('owl').onclick=function(){
+// //     alert("owl clicked")   //There might be some problem in this so we use event listerners which also gives us ability of propogation. 
+// //    }
+// document.getElementById('owl').addEventListener('click',function(e){  //e is an event object
+//     // alert("owl clicked again")
+//     console.log(e)
+// },false) //false by default       //can listen to various events
+// //attachEvent() was used earlier
+// //jQuery framework-onEventListener
+// //Events we need to study-type,timestamp,defaultPrevented(stop default behavior),target,toElemnt,srcElement,currentTarget,
+// //clientX,clientY,screenX,screenY-They are position related
+// //altkey,ctrlkey,shiftkey,keyCode
+
+// //Event propogation
+// //What is this true ,false in event?
+// //Event propogation-event bubbling,event capturing
+// document.getElementById('images').addEventListener('click',function(e){
+//     console.log("clicked inside the ul");
+// },true)
+// document.getElementById('owl').addEventListener('click',function(e){
+//     console.log("owl clicked");
+//     e.stopPropagation()
+// },true) //If we click owl now .first "owl clicked" and then "clikced inside ul".This is called bubbling.But this is not right.Bubbling-bottom to  top
+
+// //true → Capturing (Top → Bottom)
+// //false or omitted → Bubbling (Bottom → Top)
+// document.getElementById('google').addEventListener('click',function(){
+//     e.preventDefault();
+//     e.stopPropagation()
+//     console.log('google clicked') 
+//     e.defaultPrevented()
+// },false)
+
+//As we click on the image,it disappears.
+ document.querySelector('#images').addEventListener('click',function(e){
+    console.log(e.target.parentNode); //target tell the location of the event.
+    
+ },false)
 </script>
 </html>
