@@ -21,8 +21,8 @@
   div.style.padding="12px"
   //Now the div we have created is in the memory.It is still not in the page.We have to attach it to the document.
   //div.innerText="Chai or code"
-  const addText=document.createTextNode("Chai aur code") //Now the TextNode created will be added to the div. 
-  div.appendChild(addText)
+  const addText=document.createTextNode("Chai aur code") //Better way as You can add multiple text nodes without overwriting existing content.
+  div.appendChild(addText) //Now the TextNode created will be added to the div. 
   //Now finally attach div to the document
   document.body.appendChild(div)
 </script> 
