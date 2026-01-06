@@ -17,8 +17,7 @@
             <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
         </ul>
    </div>
-</body>
-<script>
+   <script>
 // //    document.getElementById('owl').onclick=function(){
 // //     alert("owl clicked")   //There might be some problem in this so we use event listerners which also gives us ability of propogation. 
 // //    }
@@ -40,22 +39,32 @@
 // },true)
 // document.getElementById('owl').addEventListener('click',function(e){
 //     console.log("owl clicked");
-//     e.stopPropagation()
+//     e.stopPropagation() //Now no event propogation.
 // },true) //If we click owl now .first "owl clicked" and then "clikced inside ul".This is called bubbling.But this is not right.Bubbling-bottom to  top
 
 // //true → Capturing (Top → Bottom)
 // //false or omitted → Bubbling (Bottom → Top)
-// document.getElementById('google').addEventListener('click',function(){
-//     e.preventDefault();
-//     e.stopPropagation()
-//     console.log('google clicked') 
-//     e.defaultPrevented()
-// },false)
+document.getElementById('google').addEventListener('click',function(e){
+    e.preventDefault(); //Stops default behaviour of the tag.
+    e.stopPropagation();
+    console.log('google clicked') 
+   
+},false)
 
-//As we click on the image,it disappears.
+//As we click on the image,it disappears.Here we don't have to just remove the image,we need to remove the whole <li>image</li> parentNode of that image.Else the image will be removed but the bullet point will remain there.
  document.querySelector('#images').addEventListener('click',function(e){
-    console.log(e.target.parentNode); //target tell the location of the event.
-    
- },false)
+    console.log(e.target) //target tell the location of the event,which is the image.
+    console.log(e.target.parentNode); //target.parentNode tell the whole parentNode which is <li>image</li>.
+//     let removeIt=e.target.parentNode;
+//     removeIt.remove(); //Comparitively less used.But if we click on the google then all the images will be removed as the parenNode now is <ul></ul>.
+//    //removeIt.parentNode.removeChild(removeIt);
+//  },false)
+if(e.target.tagName==='IMG'){  //Now only clicking the images will remove them.
+    console.log(e.target.id)
+    let removeIt=e.target.parentNode
+    removeIt.remove()
+}
 </script>
+</body>
+
 </html>
