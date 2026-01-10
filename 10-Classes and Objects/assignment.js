@@ -13,7 +13,7 @@ let student2=new User("abhai","afafbafaf.@gmail.com");
 let teacher1=new User("Dean","dean@gsmail.com")
 class Admin extends User{
     constructor(name,email){
-        super(name,email); //Calling the constructor of parent class "User" and passing the values emial and name.
+        super(name,email); //Calling the constructor of parent class "User" and passing the values email and name.
     }
     editData(){
         DATA="Some new value";

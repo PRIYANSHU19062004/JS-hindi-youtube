@@ -6,7 +6,7 @@ const student={
     },
     
 };
-//Every Object has an inbuilt special property called Prototype having own states or propeties.
+//Every Object has an inbuilt special property called Prototype having own states or properties.
 console.log(student.toString) //This toString function is provided by the prototype property.This prototype is itself an object having properties and methods.
 //
 const employee={     //Both ways of writing methods inside an object are correct.
@@ -33,7 +33,7 @@ karanArjun._proto_=employee;
 //*****************Classes in JavaScript are the blueprint for the objects. **********************************************/
 class ToyotaCar{
     constructor(price,mileage){
-        console.log("creating new object") //Now whenever we will create and object, the constucter will be invoked and print "Creating new object"
+        console.log("creating new object") //Now whenever we will create an object, the constucter will be invoked and print "Creating new object"
         this.price=price;
         this.mileage=mileage;
     }

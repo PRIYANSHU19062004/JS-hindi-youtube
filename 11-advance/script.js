@@ -6,7 +6,7 @@
 function hello(){
     console.log("hello");
 }
-setTimeout(hello,2000)//timeout-after how much the work should be done.2s=2000ms.
+setTimeout(hello,2000)//timeout-after how much time, the work should be done.2s=2000ms.
 console.log("hi")
 setTimeout(()=>{
     console.log("hello")
@@ -32,13 +32,13 @@ const hello=()=>{
 setTimeout(hello,3000);
 ///////////////////////////////////////////////////////
 
-// function getData(dataId){ //2s to search data and send  //getData returns data or it is a database
+// function getData(dataId){ //2s to search data and send  //getData returns data or it is a database.
 //     setTimeout(()=>{
 //     console.log("data"+dataId)
 //     },2000);
 // }
 //We first want data1,then data2 and then data3.
-//What is we want to get first data and then search for the next data.We want data with indiavidual delay.
+//What is we want to get first data and then search for the next data.We want data with individual delay.
 // getData(1);
 // getData(2);
 // getData(3);
@@ -50,7 +50,7 @@ setTimeout(hello,3000);
 //We want individual delay.Like data 1,then wait for 2ms and then get data 2.We will use callback here
 //getData(2,getData(2)) will immediately execute getData(2) inside as it has paranthesis.But we first want to execute the getData(1) and then getData(2)
 //So we use arrow function which didn't immediately execute the function
-//Call back are passed through callbacks.
+//Call back are passed through arrow functions.
 
 function getData(dataId,getNextData){
     setTimeout(()=>{

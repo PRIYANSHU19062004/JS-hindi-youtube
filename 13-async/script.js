@@ -2,7 +2,7 @@ async function hello(){
     console.log("hello");
 }
 //When we will excute the hello function.It will pring hello and return a promise too.We can make a normal function as async function.
-//await pauses the execution of its surrounding async function until the promise is settled.It can be used only inside a async function.
+//await pauses the execution of its surrounding async function until the promise is settled.It can be used only inside an async function.
 
 function api(){
     return new Promise((resolve,reject)=>{
