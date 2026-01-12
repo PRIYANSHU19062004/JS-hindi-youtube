@@ -7,12 +7,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button onclick="console.log('button was clicked');alert('hello!')">Click me</button>
+    <button id="button" onclick="console.log('button was clicked');alert('hello!')">Click me</button> <!--Inline event handling.-->
     <button ondblclick="console.log('button was clicked 2 times.')">Click me 2 times!</button>
- <script src="script.js"></script>
- <div>
+
+ <div onmouseover="console.log('You are inside div')">
    this is a box. 
  </div>
-
+ <div id="btn1">Button</div>
+ <div id="box1"></div>
+ <button id="button2">Button2</button>
+ <button id="button3">Button3</button>
+ <button id="button4">Button4</button>
+ <script src="script.js"></script>
 </body>
 </html>

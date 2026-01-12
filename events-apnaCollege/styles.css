@@ -5,3 +5,8 @@ div{
     color:white;
     border:1px solid black;
 }
+#box1{
+    height:50px;
+    width:50px;
+    background-color: bisque;
+}
